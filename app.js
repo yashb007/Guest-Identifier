@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors')
-const app = express()
-const PORT = process.env.port ||  8080
 const mongoose = require('mongoose');
-//mongodb+srv://yash:<password>@cluster0.6zxsz.mongodb.net/<dbname>?retryWrites=true&w=majority
+const bodyParser = require('body-parser')
+const app = express()
 
-mongoose.connect(MONGOURI,{
+const PORT = process.env.port ||  8080
+
+
+mongoose.connect("mongodb+srv://guest:nLLs2pi66N7eKBzs@cluster0.n8ftq.mongodb.net/<dbname>?retryWrites=true&w=majority",{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
@@ -15,16 +17,17 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('error', (err) => {
     console.log(" Does not Connect to mongo",err);
 })
-// require('./models/user')
-// require('./models/post')
-//k11IMlgnCrf5LsOT
-app.use(cors())
+
+require('./models/user')
+
 app.use(express.json())
-// app.use(require('./routes/auth'))
-// app.use(require('./routes/post'))
-// app.use(require('./routes/user'))
+app.use(bodyParser.json())
+//app.use(cors());
+app.use(require('./routers/user'))
 
-
+app.get('/st',(req,res)=>{
+    res.json({ working: "fine" })
+})
 // if(process.env.NODE_ENV=="production"){
 //     app.use(Express.static('client/build'))
 //     const path = require('path')
