@@ -16,6 +16,9 @@ const userSchema = new mongoose.Schema({
     contact : {
         type: Number,
         //required : true
+    },
+    photo:{
+        type: Buffer
     }
 })
 
