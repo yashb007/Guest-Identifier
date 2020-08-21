@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose')
-const User = mongoose.model("User")
+const User = require('../models/user')
 const nodemailer = require('nodemailer')
 const sendgridTransport = require('nodemailer-sendgrid-transport')
 
@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport(sendgridTransport({
 
 
 
-exports.getUserById = (req,res)=>{
+exports.getUserById = (req,res,next,id)=>{
     User.findById(id).exec((err,user) => {
         if(err){
             return res.status(400).json({
