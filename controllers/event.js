@@ -14,7 +14,6 @@ exports.getEventById = (req,res,next,id)=>{
         next()
     })
 }
-
 exports.add = (req,res)=>{
     const {name , date , time ,Price} =  req.body;
     const   event = new Event ({

@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const userRoute =  require('./routers/user')
 const eventRoute =  require('./routers/event')
+const adminRoute = require('./routers/admin')
 const PORT = process.env.port ||  8080
 
 mongoose.connect("mongodb+srv://guest:nLLs2pi66N7eKBzs@cluster0.n8ftq.mongodb.net/<dbname>?retryWrites=true&w=majority", {useNewUrlParser: true,
@@ -22,6 +23,8 @@ app.use(cookieParser())
 app.use(cors());
 app.use('/user',userRoute)
 app.use('/event',eventRoute)
+app.use('/admin',adminRoute)
+
 app.get('*', (req, res) => res.json({ working: "fine" }))
 app.post('*', (req, res) => res.json({ working: "fine" }))
 
