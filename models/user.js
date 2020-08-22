@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const Event = require('./event')
+const {ObjectId} = mongoose.Schema.Types
 
 const userSchema = new mongoose.Schema({
     name : {
@@ -17,9 +19,16 @@ const userSchema = new mongoose.Schema({
         type: Number,
         //required : true
     },
-    photo:{
+    photo1:{
         type: Buffer
-    }
+    },
+    photo2:{
+        type: Buffer
+    },
+    attendEvent:[{
+        type:ObjectId,
+        ref:"Event"
+    }]
 })
 
  module.exports =  mongoose.model("User",userSchema)
