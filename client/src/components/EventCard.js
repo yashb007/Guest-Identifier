@@ -4,7 +4,7 @@ import {Card , Nav , Button , Row ,Col, Container} from  'react-bootstrap';
  function EventCard() {
     return (
         <Container>
-        <Card style={{ marginTop:'20px' }}>
+        <Card style={{ marginTop:'50px' }}>
          <Row>  
          <Col>
          <Card.Img variant="top" src="../top.jpg" />

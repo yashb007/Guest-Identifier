@@ -4,11 +4,10 @@ import {Button} from  'react-bootstrap';
  function Top() {
     return (
       <div className = "top" >
-      <div className="cen-color row justify-content-center align-items-center">
+      <div className="cen-color ">
       <h1 className="">Hello, world!</h1>
       <Button variant="primary">Primary</Button>
-    </div>
-    
+       </div>
       </div>
     );
   }

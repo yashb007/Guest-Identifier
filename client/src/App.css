@@ -1,6 +1,4 @@
-* {
-  margin: 0px;
-  }
+
 .App {
   text-align: center;
 }
@@ -33,6 +31,7 @@
 
 .top{
   background-image: url('./top.jpg');
+  width:100%;
   height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,6 +40,7 @@
 
 .cen-color{
   color: white;
+ 
  
 }
 

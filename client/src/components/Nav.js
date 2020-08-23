@@ -5,23 +5,20 @@ import { Nav ,  Container} from  'react-bootstrap';
  function NavBar() {
     return (
         <Container>
-        <Nav justify variant="tabs" defaultActiveKey="" style={{marginTop : '20px'}}>
-  <Nav.Item>
-    <Nav.Link eventKey="link-0">Events</Nav.Link>
-  </Nav.Item>
-  
-   <Nav.Item>
-     <Nav.Link eventKey="link-2">Schedule</Nav.Link>
-   </Nav.Item>
-   <Nav.Item>
-    <Nav.Link eventKey="link-3">Speakers</Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link eventKey="link-4">Register</Nav.Link>
-  </Nav.Item>
- 
-
-  </Nav>
+        <Nav justify variant="tabs" activeKey="1"   style={{marginTop : '20px'}}>
+        <Nav.Item>
+           <Nav.Link eventkey="1" href="/">Events</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link  href="/schedule">Schedule</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link  href="/speaker">Speakers</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link href="/register">Register</Nav.Link>
+        </Nav.Item>
+        </Nav>
       </Container>
     );
   }
