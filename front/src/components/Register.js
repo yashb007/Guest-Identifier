@@ -4,7 +4,7 @@ import {Button, Container,Form} from  'react-bootstrap';
  function Register() {
     return (
         <Container>
-        <Form className="reg"  >
+        <Form style={{width:"500px",marginTop:"50px",marginLeft:"25%"}} >
          <Form.Group controlId="formBasicEmail">
                <Form.Label>Email address</Form.Label>
                <Form.Control type="email" placeholder="Enter email" />

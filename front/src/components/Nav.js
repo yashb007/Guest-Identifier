@@ -5,7 +5,7 @@ import { Nav ,  Container} from  'react-bootstrap';
  function NavBar() {
     return (
         <Container>
-        <Nav justify variant="tabs" activeKey="1"  className="" style={{marginTop : '20px',height:"55px",fontSize:"25px"}}>
+        <Nav justify variant="tabs" activeKey="1"   style={{marginTop : '20px'}}>
         <Nav.Item>
            <Nav.Link eventkey="1" href="/">Events</Nav.Link>
         </Nav.Item>

@@ -2,6 +2,7 @@
 *{
   margin: 0;
 }
+
 .top{
   background-image: url('./images/top.jpg');
   width:100%;
@@ -9,7 +10,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  
+  
 }
 
 .cen-color{
@@ -19,31 +21,14 @@
 .top-text{
   font-size:100px;
 }
-.reg{
-  width:500px;
-  margin-top:50px;
-  margin-left:25%;
-}
-.speaker-cols{
-  margin-top: 50px;
-}
+
 .contact{
   width:100%;
   margin-top: 100px;
-  overflow: hidden;
- }
- @media (max-width: 576px) {
+}
+/* }
+@media (max-width: 576px) {
    .top-text{
      font-size:45px;
    }
-   .reg{
-     width:100%;
-     margin-left:0%;
-    }
-} 
-
-@media (max-width: 576px) {
-  .card-img{
-    height: 100%;
-  }
-}
+} */
