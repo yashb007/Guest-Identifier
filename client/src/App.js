@@ -1,13 +1,9 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Top from './components/top'
-import Event from './components/Event';
-import NavBar from './components/Nav';
-import Speaker from './components/Speaker';
-import Schedule from './components/Schedule';
-import Register from './components/Register';
-import Contact from './components/Contact';
+import SignIn from './components/Admin/signin';
+import User from './components/user';
+import DashBoard from './components/Admin/dashboard';
 
 
 
@@ -15,18 +11,15 @@ import Contact from './components/Contact';
 function App() {
   return (
     <div>
-    <Top/>
-    <NavBar/>
-    <BrowserRouter>
+     <BrowserRouter>
     <Switch>
-    <Route exact path='/' component={Event} />
-    <Route path='/speaker' component={Speaker} />
-    <Route exact path='/schedule' component={Schedule} />
-    <Route exact path='/register' component={Register} />
+     <Route exact path='/' component={User} />
+     <Route exact path='/signin' component={SignIn} />
+     <Route path='/admin' component={DashBoard} />
      </Switch>
-    </BrowserRouter>
-    <Contact />
+     </BrowserRouter>
     </div>
+    
   )
 }
 

@@ -11,6 +11,8 @@ import Typography from '@material-ui/core/Typography';
 export default function OppositeContentTimeline() {
   return (
     <div style={{marginTop:"80px"}}>
+    <h1 className="text-center" style={{marginTop:"30px"}}>Schedule</h1>
+    <h2 className="text-center"  style={{marginTop:"30px"}}>Start</h2>
     <React.Fragment>
       <Timeline align="alternate">
         <TimelineItem>

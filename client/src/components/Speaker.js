@@ -5,6 +5,8 @@ import {Card , Nav , Button , Row ,Col, Container, Image, ButtonToolbar} from  '
  function Speaker() {
     return (
       <div className="container">
+      <h1 className="text-center" style={{marginTop:"30px"}}>Speakers</h1>
+     
         <Row className="justify-content" >
         <Col xs={12} md={4} className="speaker-cols">
         <Card >

@@ -1,9 +1,10 @@
 import React from 'react';
 
-import {Button, Container,Form} from  'react-bootstrap';
+import {Button, Container,Form , ButtonToolbar} from  'react-bootstrap';
  function Register() {
     return (
         <Container>
+    <h1 className="text-center" style={{marginTop:"60px",marginBottom:"30px"}}>Registration</h1>
         <Form className="reg"  >
          <Form.Group controlId="formBasicEmail">
                <Form.Label>Email address</Form.Label>
@@ -25,9 +26,8 @@ import {Button, Container,Form} from  'react-bootstrap';
         <Form.Group>
         <Form.File id="photo" label="Upload Your Photo Here" />
       </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+      <ButtonToolbar style={{display:"flex",justifyContent:"center",marginTop:"20px"}}> <Button variant="success"> Register </Button></ButtonToolbar>
+          
       </Form>
      </Container>
      );
